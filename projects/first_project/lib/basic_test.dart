@@ -1,5 +1,13 @@
-// Don't need to define function?
+class Person {
+  String? name;
+  int? age; //non nullable
+  Person(String name, int age) {
+    this.name = name; //pointer to scope
+    this.age = age;
+  }
+}
 
+// Don't need to define function?
 int addNumbers(int a, int b) {
   return a + b;
 }
