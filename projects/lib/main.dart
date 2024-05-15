@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       backgroundColor: Colors.blue,
       body: SafeArea(
-          child: Container(color: Colors.white, child: const Text("Hello"))),
+          child: Container(
+              color: Colors.white, child: const Text("Hello, Angela!"))),
     ));
   }
 }
