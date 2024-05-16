@@ -9,32 +9,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            verticalDirection: VerticalDirection.up,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Container(
-                color: Colors.white,
-                height: 100.0,
-                width: 100.0,
-                child: const Text("Container 1"),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.teal,
+                backgroundImage: NetworkImage(
+                    'https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg'),
               ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.blue,
-                child: const Text('Container 2'),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                color: Colors.red,
-                child: const Text('Container 3'),
+              Text(
+                'Abboskhon Sobirov',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
