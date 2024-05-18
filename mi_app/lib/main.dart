@@ -40,50 +40,54 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: const EdgeInsets.symmetric(
                     vertical: 10.0, horizontal: 25.0),
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade900,
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    Text('+82 010 2964 4404',
-                        style: TextStyle(
-                          fontFamily: 'Source Sans Pro',
-                          fontSize: 20.0,
-                          color: Colors.teal.shade900,
-                        )) // Changed () to []
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(25.0),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        color: Colors.teal.shade900,
+                      ),
+                      const SizedBox(
+                        width: 10.0,
+                      ),
+                      Text('+82 10 2964 4404',
+                          style: TextStyle(
+                            fontFamily: 'SourceSans3',
+                            fontSize: 20.0,
+                            color: Colors.teal.shade900,
+                          )) // Changed () to []
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: const EdgeInsets.symmetric(
                     vertical: 10.0, horizontal: 25.0),
-                padding: const EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade900,
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    Text('constructorlib@gmail.com',
-                        style: TextStyle(
-                          fontFamily: 'SourceSans3',
-                          fontSize: 20.0,
-                          color: Colors.teal.shade900,
-                        )) // Changed () to []
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(25.0),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(
+                        Icons.email,
+                        color: Colors.teal.shade900,
+                      ),
+                      const SizedBox(
+                        width: 10.0,
+                      ),
+                      Text('constructorlib@gmail.com',
+                          style: TextStyle(
+                            fontFamily: 'SourceSans3',
+                            fontSize: 20.0,
+                            color: Colors.teal.shade900,
+                          )) // Changed () to []
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -95,4 +99,21 @@ class MyApp extends StatelessWidget {
 }
 /*
 *
-* */
+*
+* Row(
+*                     children: <Widget>[
+*                       Icon(
+*                         Icons.phone,
+*                         color: Colors.teal.shade900,
+*                       ),
+*                       const SizedBox(
+*                         width: 10.0,
+*                       ),
+*                       Text(
+*                            '+82 010 2964 4404',
+*                           style: TextStyle(
+*                             fontFamily: 'Source Sans Pro',
+*                             fontSize: 20.0,
+*                             color: Colors.teal.shade900,
+*                           )) // Changed () to []
+*                     ],*/
