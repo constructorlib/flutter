@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
             children: <Widget>[
@@ -41,9 +41,48 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                child: const Row(
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 25.0),
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
                   children: <Widget>[
-                    Icon(Icons.add_shopping_cart), // Changed () to []
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal.shade900,
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('+82 010 2964 4404',
+                        style: TextStyle(
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20.0,
+                          color: Colors.teal.shade900,
+                        )) // Changed () to []
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 25.0),
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal.shade900,
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('constructorlib@gmail.com',
+                        style: TextStyle(
+                          fontFamily: 'SourceSans3',
+                          fontSize: 20.0,
+                          color: Colors.teal.shade900,
+                        )) // Changed () to []
                   ],
                 ),
               ),
