@@ -9,19 +9,19 @@ class MyApp extends StatelessWidget {
   static const customTeal = Color(0xFFE0F2F1);
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundColor: Colors.teal,
                 backgroundImage: NetworkImage(
                     'https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg'),
               ),
-              Text(
+              const Text(
                 'Ikrima Ali',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 "FRONTEND DEVELOPER",
                 style: TextStyle(
                   fontFamily: 'Source Sans 3',
@@ -38,6 +38,13 @@ class MyApp extends StatelessWidget {
                   color: customTeal,
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Container(
+                child: const Row(
+                  children: <Widget>[
+                    Icon(Icons.add_shopping_cart), // Changed () to []
+                  ],
                 ),
               ),
             ],
