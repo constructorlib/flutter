@@ -11,18 +11,15 @@ class XylophoneApp extends StatefulWidget {
 }
 
 class _XylophoneAppState extends State<XylophoneApp> {
-  final AudioCache player =
-      AudioCache(prefix: 'assets/sounds/'); // Specify sounds folder
-
-  void playSound(String note) async {
-    await player.play(note); // Use the pre-cached sound with note as filename
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    player.clearAll(); // Release audio resources when the widget is disposed
-  }
+  // final player = AudioPlayer();
+  //
+  // // Specify sounds folder
+  //
+  // void playSound() async {
+  //   await player.setSource(AssetSource('assets/note2.wav'));
+  //   await player.play(AssetSource('assets/note1.wav'));
+  //   // Use the pre-cached sound with note as filename
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -33,21 +30,14 @@ class _XylophoneAppState extends State<XylophoneApp> {
         ),
         body: SafeArea(
           child: Center(
-            child: GridView.count(
-              crossAxisCount: 2, // Two buttons per row
-              children: [
-                TextButton(
-                  onPressed: () =>
-                      playSound('note1.wav'), // Play note1.wav on press
-                  child: Text('C'),
-                ),
-                TextButton(
-                  onPressed: () =>
-                      playSound('note2.wav'), // Play note2.wav on press
-                  child: Text('D'),
-                ),
-                // Add more TextButtons for other notes with corresponding sound files
-              ],
+            child: TextButton(
+              onPressed: () async {
+                final player = AudioPlayer();
+                await player.play(
+                  AssetSource('note1.wav'),
+                );
+              },
+              child: Text('Play me!'),
             ),
           ),
         ),
