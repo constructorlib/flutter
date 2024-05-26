@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() => runApp(XylophoneApp());
+void main() => runApp(const XylophoneApp());
 
 class XylophoneApp extends StatefulWidget {
   const XylophoneApp({super.key});
@@ -11,111 +11,127 @@ class XylophoneApp extends StatefulWidget {
 }
 
 class _XylophoneAppState extends State<XylophoneApp> {
-  // final player = AudioPlayer();
-  //
-  // // Specify sounds folder
-  //
-  // void playSound() async {
-  //   await player.setSource(AssetSource('assets/note2.wav'));
-  //   await player.play(AssetSource('assets/note1.wav'));
-  //   // Use the pre-cached sound with note as filename
-  // }
+  void playSound(int soundNumber) async {
+    final player = AudioPlayer();
+    await player.play(
+      AssetSource('note$soundNumber.wav'),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text('Xylophone App'),
+          title: const Text('Xylophone App'),
         ),
         body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.red,
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () {
+                      playSound(1);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note1.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(2);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note2.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.green,
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.yellow,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(3);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note3.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(4);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note4.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.yellow,
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(5);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note5.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.brown,
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(6);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note6.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-              TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blueAccent[100],
+                Expanded(
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.zero,
+                      ),
+                    ),
+                    onPressed: () async {
+                      playSound(7);
+                    },
+                    child: const Text(''),
+                  ),
                 ),
-                onPressed: () async {
-                  final player = AudioPlayer();
-                  await player.play(
-                    AssetSource('note7.wav'),
-                  );
-                },
-                child: Text('Play me!'),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
